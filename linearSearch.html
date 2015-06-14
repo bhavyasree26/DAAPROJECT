@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DAA | PROJECT</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/linearSearch.css">
+
+	<style>
+	.list_defual{
+		width: auto !important;
+		height: auto;
+		border: 0px solid black !important;
+		padding: 0px;
+	}
+	h1{
+		background-color: #fff;
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+				<div class="row">
+			<div class="col-md-12 text-center"><h1>Algorithms By  H4shCoders</h1></div>
+		</div>
+		    <div class="row">
+    	<nav class="navbar navbar-default navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="glyphicon glyphicon-arrow-down"></span>
+                  MENU
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="collapse">
+                <ul class="nav navbar-nav list_defual">
+                    <li class="list_defual"><a href="index.html">Home</a></li>
+                    <li class="list_defual"><a href="selectionfinal.html">Selection Sort</a></li>
+                    <li class="list_defual"><a href="quicksort.html">Quick Sort</a></li>
+                    <li class="list_defual"><a href="insertionSort.html">Insertion Sort</a></li>
+                    <li class="list_defual"><a href="bubbleSort.html">Bubble Sort</a></li>
+                    <li class="active list_defual"><a href="linearSearch.html">Linear Search</a></li>
+                    <li class="list_defual"><a href="binarySearch.html">Binary Search</a></li>
+                </ul> 
+            </div>
+         </nav> 
+    </div>
+		<h1>Linear Search</h1>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-12">
+								
+						<h3>Explanation</h3>
+						<p>
+							A linear search is the most basic of search algorithm you can have. A linear search sequentially moves through your collection (or data structure) looking for a matching value.
+						</p>
+						<p>
+							Linear search, also known as sequential search, is a process that checks every element in the list sequentially until the desired element is found. The computational complexity for linear search is O(n), making it generally much less efficient than binary search (O(log n)). But when list items can be arranged in order from greatest to least and the probabilities appear as geometric distribution (f (x)=(1-p) x-1p, x=1,2), then linear search can have the potential to be notably faster than binary search
+						</p>
+						
+								<h3>Algorithm</h3>
+							<img src="images/linear.png" alt="" style="padding-right:40px" class="img-responsive">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-12">
+						<br><br>
+						<table class="table">
+							
+			                <tr>
+								<td colspan="3" class="text-center">
+									<input type="text" id="next" placeholder="Enter number for input">
+									<input type="button" id="add" value="Add" class="btn btn-success"/>
+			                		<input type="button" id="remove" value="Remove" class="btn btn-success" />
+								</td>
+							</tr>
+								<td colspan="3" class="text-center">
+									<input type="text" id="value" placeholder="Enter number for Search">
+									<input type="button" id="search" value="Search" class="btn btn-success" />
+			                		<input type="button" id="reset" value="Reset" class="btn btn-success" />
+								</td>
+							</tr>
+			                <tr>
+								<td colspan="2" class="text-center">
+			                		<div id="exeDesc"></div>
+								</td>
+							</tr>
+						</table>
+						<h3>Result</h3>
+							<div  id="linear-list" >
+								<ul></ul>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<br>
+			&copy; H4shCoders | All rights reserved.
+			<br><br><br>
+		</div>
+	</div>
+
+
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery.animatedSort.js"></script>
+	<script src="js/linearSearch.js"></script>
+</body>
+</html>

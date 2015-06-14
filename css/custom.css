@@ -1,0 +1,11 @@
+
+.main_images{
+	max-width: 35%;
+	max-height: 300px;
+	border: 2px solid black;
+	overflow: hidden;
+}
+
+.side_bar{
+	background-color: green;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DAA | PROJECT</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bubbleSort.css">
+
+	<style>
+	.list_defual{
+		width: auto !important;
+		height: auto;
+		border: 0px solid black !important;
+		padding: 0px;
+	}
+	h1{
+		background-color: #fff;
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+				<div class="row">
+			<div class="col-md-12 text-center"><h1>Algorithms By  H4shCoders</h1></div>
+		</div>
+		    <div class="row">
+    	<nav class="navbar navbar-default navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="glyphicon glyphicon-arrow-down"></span>
+                  MENU
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="collapse">
+                <ul class="nav navbar-nav list_defual">
+                    <li class="list_defual"><a href="index.html">Home</a></li>
+                    <li class="list_defual"><a href="selectionfinal.html">Selection Sort</a></li>
+                    <li class="list_defual"><a href="quicksort.html">Quick Sort</a></li>
+                    <li class="list_defual"><a href="insertionSort.html">Insertion Sort</a></li>
+                    <li class="active list_defual"><a href="bubbleSort.html">Bubble Sort</a></li>
+                    <li class="list_defual"><a href="linearSearch.html">Linear Search</a></li>
+                    <li class="list_defual"><a href="binarySearch.html">Binary Search</a></li>
+                </ul> 
+            </div>
+         </nav> 
+    </div>
+		<h1>Bubble Sort</h1>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-12">
+								
+						<h3>Explanation</h3>
+						<p>
+							Bubble sort is a sorting algorithm that works by repeatedly stepping through lists that need to be sorted, comparing each pair of adjacent items and swapping them if they are in the wrong order. This passing procedure is repeated until no swaps are required, indicating that the list is sorted. Bubble sort gets its name because smaller elements bubble toward the top of the list.
+						</p>
+						<p>
+							Bubble sort is also referred to as sinking sort or comparison sort.
+						</p>
+						<p>
+							Bubble sort has a worst-case and average complexity of O(n2), where n is the number of items sorted. Unlike the other sorting algorithms, bubble sort detects whether the sorted list is efficiently built into the algorithm. Bubble sort performance over an already sorted list is O(n).
+						</p>
+								<h3>Algorithm</h3>
+							<img src="images/bubblesort.jpg" alt="" style="padding-right:40px" class="img-responsive">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-12">
+						<br><br>
+						<table class="table">
+							<tr>
+								<td>Please Enter Random element Array for Sorting</td>
+								<td>
+									<input type="text" name="A" id="arrayinput" placeholder="23,54,12,...." class="form-control" />
+			                	</td>
+			                </tr>
+			                <tr>
+								<td colspan="2" class="text-center">
+			                		<input type="button" id="bubble-sort" value="Sort" class="btn btn-success" />
+			                		<input type="button" id="bubble-reset" value="Reset" class="btn btn-success" />
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" class="text-center">
+			                		<div id="exeDesc"></div>
+								</td>
+							</tr>
+						</table>
+						<h3>Result</h3>
+							<div  id="bubble-list" >
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<br>
+			&copy; H4shCoders | All rights reserved.
+			<br><br><br>
+		</div>
+	</div>
+
+
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery.animatedSort.js"></script>
+	<script src="js/bubbleSort.js"></script>
+</body>
+</html>
