@@ -18,18 +18,22 @@ var dispLeft,dispRight;
  
 var gLeftIndx, gRightIndx;
 var pivotLoc; 
-
+var numbers;
 
 function ExecuteQS()
 { // The array A (global) is the input to Quicksort
- A=[];
+ A=[];numbers=[];
 S=document.getElementById('arrayinput').value;
 var res = S.split(",");  // The input array for Quicksort
 for(k=0;k<=res.length;k++){
-	if(k==0)
+	if(k==0){
 		A[k]=0;
-	else
+    numbers[k]=0;
+  }
+	else{
 		A[k]=parseInt(res[k-1]);
+    numbers[k]=A[k];
+  }
 }
   if (Timer1) clearInterval(Timer1);
   Timer1 = null; 
@@ -177,7 +181,8 @@ function PrintArray(A, prevleft, prevright)
       elems = document.getElementsByTagName("ul");
       elem = elems[elems.length-1];
       elem.className = "finalarray";
-   } 
+  exeTime(numbers);
+   }
 }
   
  
@@ -246,4 +251,35 @@ function AnimateArrow()
          
    }   
     
+}
+//--------------------------executionTime
+
+function exeTime(num){
+  var start = new Date().getTime();
+  qsort(num);
+  var end = new Date().getTime();
+  var time = end - start;
+  $('#exeDesc').text('Execution time: ' + time+' milliseconds animation time excluded.');
+
+}
+//-------------------------------------------------------sleep--------------------------
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
+function qsort(a) {
+    if (a.length == 0) return [];
+ 
+    var left = [], right = [], pivot = a[0];
+ 
+    for (var i = 1; i < a.length; i++) {
+        sleep(1);
+        a[i] < pivot ? left.push(a[i]) : right.push(a[i]);
+    }
+ 
+    return qsort(left).concat(pivot, qsort(right));
 }

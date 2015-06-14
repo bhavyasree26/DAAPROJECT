@@ -3,19 +3,19 @@ var TargetTick;
 var Tick;
 var Timer1;
 var  A; // The array to be sorted
-
+var numbers;
 var arr0 = "<span id='arr0' >&darr;</span>";
 var arr1 = "<span id='arr1' >&darr;</span>";
  
 function ExecuteSort()
 {
-  A = [];
+  A = [];numbers=[];
 S=document.getElementById('arrayInput').value;
 var res = S.split(",");  // The input array for Quicksort
 for(k=0;k<res.length;k++){
     A[k]=parseInt(res[k]);
+    numbers[k]=A[k];
 }
-
      var Speed =600 /*parseInt(speedSelectList.options[speedSelectList.selectedIndex].value)*/;
 
      var Alg = 0/*parseInt(algorithmSelectList.options[algorithmSelectList.selectedIndex].value)*/; 
@@ -144,7 +144,10 @@ function AnimateInsertionSort()
 }
 
 function EndAnimate()
-{  clearInterval(Timer1);  } 
+{  
+  clearInterval(Timer1);  
+  exeTime(numbers);
+} 
  
 function UpdateTick()
 {  Tick++;
@@ -176,3 +179,41 @@ function SelectionSort_Rec(A,i)
     SelectionSort_Rec(A,i+1); // Recursive call
 }
 
+//--------------------------executionTime
+
+function exeTime(num){
+  var start = new Date().getTime();
+  mySelSort(num);
+  var end = new Date().getTime();
+  var time = end - start;
+  $('#exeDesc').text('Execution time: ' + time+' milliseconds animation time excluded.');
+
+}
+//-------------------------------------------------------sleep--------------------------
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
+function mySelSort(sortMe)
+{
+    var i, j, tmp, tmp2;
+    for (i = 0; i < sortMe.length - 1; i++)
+    {
+      sleep(1);
+        tmp = i;
+        for (j = i + 1; j < sortMe.length; j++){
+            if (sortMe[j] < sortMe[tmp]){
+                tmp = j;
+            }
+        }
+        if(tmp!=i){
+            tmp2 = sortMe[tmp];
+            sortMe[tmp] = sortMe[i];
+            sortMe[i] = tmp2;
+        }
+  }
+}
